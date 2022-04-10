@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Evaluation</title>
+  <meta charset="windows-1252">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="app.css">
+
+  <script>
+    function addRow() {
+      var name = document.getElementById('name').value;
+      var percentage = document.getElementById('percentage').value;
+      var year = document.getElementById('year').value;
+      var email = document.getElementById('email').value;
+      var job = document.getElementById('job').value;
+      var role = document.getElementById('role').value;
+      var department = document.getElementById('department').value;
+
+      var table = document.getElementsByTagName('table')[0];
+
+      var newRow = table.insertRow(table.rows.length / 2 + 2);
+
+      var cel1 = newRow.insertCell(0);
+      var cel2 = newRow.insertCell(1);
+      var cel3 = newRow.insertCell(2);
+      var cel4 = newRow.insertCell(3);
+      var cel5 = newRow.insertCell(4);
+      var cel6 = newRow.insertCell(5);
+      var cel7 = newRow.insertCell(6);
+
+      cel1.innerHTML = name;
+      cel2.innerHTML = percentage;
+      cel3.innerHTML = year;
+      cel4.innerHTML = email;
+      cel5.innerHTML = job;
+      cel6.innerHTML = role;
+      cel7.innerHTML = department;
+      alert("Evaluation added Successfully!");
+    }
+    function deleteRow() {
+      var table = document.getElementsByTagName('table')[0];
+      table.deleteRow(table.rows.length / 2 + 2);
+      alert("Evaluation deleted Successfully!");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3 class="brand">
+        <span class="ti-unlink"></span>
+        <a href="../HomePage/index.html"><span>HRMS</span></a>
+      </h3>
+      <span class="ti-menu-alt"></span>
+    </div>
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="">
+            <span>Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Dashboard/index.html">
+            <span class="ti-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-id-badge"></span>
+            <span>My Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-link"></span>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <span class="ti-files"></span>
+            <span>Employees</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-desktop"></span>
+            <span>Vacation</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="../EvaluationsPage/index.html">
+            <span class="ti-pie-chart"></span>
+            <span>Evaluations</span>
+          </a>
+        </li>
+        <li>
+          <a href="../TrainingPage/index.html">
+            <span class="ti-pie-chart"></span>
+            <span>Training</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-file"></span>
+            <span>Attendance</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-money"></span>
+            <span>Salary</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti-settings"></span>
+            <span>Account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-content">
+    <header>
+      <div class="search-wrapper">
+        <span class="ti-search"></span>
+        <input type="search" name="" placeholder="Search">
+      </div>
+      <div class="social-icons">
+        <span class="ti-bell"></span>
+        <span class="ti-comment"></span>
+        <div></div>
+      </div>
+    </header>
+    <main>
+      <br />
+      <h2 class="dash-title">Evaluations List</h2>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Employee Evaluation Percentage</th>
+            <th>Employee Evaluation Year</th>
+            <th>Employee Email</th>
+            <th>Employee Job Title</th>
+            <th>Employee Role</th>
+            <th>Employee Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>85%</td>
+            <td>2020</td>
+            <td>a@gmail.com</td>
+            <td>Marketing Manager</td>
+            <td>Employee</td>
+            <td>Marketing</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>88%</td>
+            <td>2020</td>
+            <td>b@yahoo.com</td>
+            <td>Finance Manager</td>
+            <td>Employee</td>
+            <td>Finance</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>90%</td>
+            <td>2020</td>
+            <td>c@gmail.com</td>
+            <td>Marketing Manager</td>
+            <td>Employee</td>
+            <td>Management</td>
+          </tr>
+        </tbody>
+      </table>
+      <h5>Showing 1 to 3 of 12 entries</h5>
+      <div class="tab-btn">
+        <button type="Previous">Previous</button>
+        <button type="Present">1</button>
+        <button type="Next">Next</button>
+      </div>
+      <a href="../EvaluationsPage/index.html"><button type="Back">Back</button></a>
+      <br /><br />
+      <h2 class="dash-title">Add Evaluation</h2>
+      <div class="box">
+        <p>Employee Name</p>
+        <input type="text" name="name" placeholder="Enter Employee Name" id="name" required="">
+        <p>Employee Evaluation Percentage</p>
+        <input type="text" name="percentage" placeholder="Enter Employee Evaluation Percentage" id="percentage"
+          required="">
+        <p>Employee Evaluation Year</p>
+        <input type="text" name="year" placeholder="Enter Employee Evaluation Year" id="year" required="">
+        <p>Employee Email</p>
+        <input type="text" name="email" placeholder="Enter Employee Email" id="email" required="">
+        <p>Employee Job Title</p>
+        <input type="text" name="job" placeholder="Enter Employee Job Title" id="job" required="">
+        <p>Employee Role</p>
+        <input type="text" name="role" placeholder="Enter Employee Role" id="role" required="">
+        <p>Employee Department</p>
+        <input type="text" name="department" placeholder="Enter Employee Department" id="department" required="">
+
+
+        <button onclick="addRow();">Save</button>
+        <button type="Delete" onclick="deleteRow();">Delete</button><br /><br />
+
+      </div>
+
+
+    </main>
+
+</body>
+
+</html>

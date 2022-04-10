@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Training</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+	<script>
+		function deleteRow(r) {
+			var i = r.parentNode.parentNode.rowIndex;
+			document.getElementsByTagName('table')[0].deleteRow(i);
+		}
+	</script>
+</head>
+
+<body>
+	<div class="he">
+		<div class="sidebar">
+			<div class="sidebar-header">
+				<h3 class="brand">
+					<span class="ti-unlink"></span>
+					<a href="../HomePage/index.html"><span>HRMS</span></a>
+				</h3>
+				<span class="ti-menu-alt"></span>
+			</div>
+			<div class="sidebar-menu">
+				<ul>
+					<li>
+						<a href="">
+							<span>Admin</span>
+						</a>
+					</li>
+					<li>
+						<a href="../Dashboard/index.html">
+							<span class="ti-home"></span>
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-id-badge"></span>
+							<span>My Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="../DepartmentPage/index.html">
+							<span class="ti-link"></span>
+							<span>Departments</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<span class="ti-files"></span>
+							<span>Employees</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-desktop"></span>
+							<span>Vacation</span>
+						</a>
+					</li>
+					<li>
+						<a href="../EvaluationsPage/index.html">
+							<span class="ti-pie-chart"></span>
+							<span>Evaluations</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="../TrainingPage/index.html">
+							<span class="ti-pie-chart"></span>
+							<span>Training</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-file"></span>
+							<span>Attendance</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-money"></span>
+							<span>Salary</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-settings"></span>
+							<span>Account</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<header>
+				<div class="search-wrapper">
+					<span class="ti-search"></span>
+					<input type="search" name="" placeholder="Search">
+				</div>
+				<div class="social-icons">
+					<span class="ti-bell"></span>
+					<span class="ti-comment"></span>
+					<div></div>
+				</div>
+			</header>
+			<main>
+				<section>
+					<br />
+					<h2 class="dash-title">Training List</h2>
+					<table class="content-table">
+						<thead>
+							<tr>
+								<th>Training Title</th>
+								<th>Training Start</th>
+								<th>Training End</th>
+								<th>Training Hours</th>
+								<th>Number of enrolled employees</th>
+								<th>Operations</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>PHP Developement</td>
+								<td>02-01-2021</td>
+								<td>02-02-2021</td>
+								<td>50</td>
+								<td>8</td>
+								<td><button value="Delete" onclick="deleteRow(this)"><span
+											class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>Time Management</td>
+								<td>11-02-2021</td>
+								<td>15-12-2021</td>
+								<td>15</td>
+								<td>10</td>
+								<td><button value="Delete" onclick="deleteRow(this)"><span
+											class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>Skills Training</td>
+								<td>28-02-2021</td>
+								<td>04-03-2021</td>
+								<td>30</td>
+								<td>12</td>
+								<td><button value="Delete" onclick="deleteRow(this)"><span
+											class="ti-trash"></span></button></td>
+							</tr>
+
+							<tr>
+								<td>Leadership Development</td>
+								<td>04-04-2021</td>
+								<td>08-04-2021</td>
+								<td>20</td>
+								<td>9</td>
+								<td><button value="Delete" onclick="deleteRow(this)"><span
+											class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>Digital Marketing</td>
+								<td>10-05-2021</td>
+								<td>15-05-2021</td>
+								<td>30</td>
+								<td>11</td>
+								<td><button value="Delete" onclick="deleteRow(this)"><span
+											class="ti-trash"></span></button></td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="../TrainingPage/index.html"><button type="Back">Back</button></a>
+				</section>
+		</div>
+		</main>
+	</div>
+	</div>
+	<script>
+		function deleteRow(r) {
+			var i = r.parentNode.parentNode.rowIndex;
+			document.getElementsByTagName('table')[0].deleteRow(i);
+		}
+	</script>
+</body>
+
+</html>

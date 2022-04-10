@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Evaluation</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+	<script>
+		function deleteRow(r) {
+			var i = r.parentNode.parentNode.rowIndex;
+			document.getElementsByTagName('table')[0].deleteRow(i);
+		}
+		function changeContent() {
+			rn = window.prompt("Input the Row number(1,2,3,4)", "1");
+			cn = window.prompt("Input the Column number(0,1,2,3,4,5,6,7)", "0");
+			content = window.prompt("Input the Cell content");
+			var x = document.getElementsByTagName('table')[0].rows[parseInt(rn, 10)].cells;
+			x[parseInt(cn, 10)].innerHTML = content;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="he">
+		<div class="sidebar">
+			<div class="sidebar-header">
+				<h3 class="brand">
+					<span class="ti-unlink"></span>
+					<a href="../HomePage/index.html"><span>HRMS</span></a>
+				</h3>
+				<span class="ti-menu-alt"></span>
+			</div>
+			<div class="sidebar-menu">
+				<ul>
+					<li>
+						<a href="">
+							<span>Admin</span>
+						</a>
+					</li>
+					<li>
+						<a href="../Dashboard/index.html">
+							<span class="ti-home"></span>
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-id-badge"></span>
+							<span>My Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="../DepartmentPage/index.html">
+							<span class="ti-link"></span>
+							<span>Departments</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							<span class="ti-files"></span>
+							<span>Employees</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-desktop"></span>
+							<span>Vacation</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="../EvaluationsPage/index.html">
+							<span class="ti-pie-chart"></span>
+							<span>Evaluations</span>
+						</a>
+					</li>
+					<li>
+						<a href="../TrainingPage/index.html">
+							<span class="ti-pie-chart"></span>
+							<span>Training</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-file"></span>
+							<span>Attendance</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-money"></span>
+							<span>Salary</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="ti-settings"></span>
+							<span>Account</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<header>
+				<div class="search-wrapper">
+					<span class="ti-search"></span>
+					<input type="search" name="" placeholder="Search">
+				</div>
+				<div class="social-icons">
+					<span class="ti-bell"></span>
+					<span class="ti-comment"></span>
+					<div></div>
+				</div>
+			</header>
+			<main>
+				<section>
+					<br />
+					<h2 class="dash-title">Evaluations List</h2>
+					<table class="content-table">
+						<thead>
+							<tr>
+								<th>Employee Name</th>
+								<th>Employee Evaluation Percentage</th>
+								<th>Employee Evaluation Year</th>
+								<th>Employee Email</th>
+								<th>Employee Job Title</th>
+								<th>Employee Role</th>
+								<th>Employee Department</th>
+								<th>Operations</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>A</td>
+								<td>85%</td>
+								<td>2020</td>
+								<td>a@gmail.com</td>
+								<td>Marketing Manager</td>
+								<td>Employee</td>
+								<td>Marketing</td>
+								<td><button onclick="changeContent()" value="Change content"><span
+											class="ti-write"></span></button><button value="Delete"
+										onclick="deleteRow(this)"><span class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>88%</td>
+								<td>2020</td>
+								<td>b@yahoo.com</td>
+								<td>Finance Manager</td>
+								<td>Employee</td>
+								<td>Finance</td>
+								<td><button onclick="changeContent()" value="Change content"><span
+											class="ti-write"></span></button><button value="Delete"
+										onclick="deleteRow(this)"><span class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>C</td>
+								<td>90%</td>
+								<td>2020</td>
+								<td>c@gmail.com</td>
+								<td>Marketing Manager</td>
+								<td>Employee</td>
+								<td>Management</td>
+								<td><button onclick="changeContent()" value="Change content"><span
+											class="ti-write"></span></button><button value="Delete"
+										onclick="deleteRow(this)"><span class="ti-trash"></span></button></td>
+							</tr>
+							<tr>
+								<td>D</td>
+								<td>92%</td>
+								<td>2020</td>
+								<td>d@gmail.com</td>
+								<td>Account Executive</td>
+								<td>Employee</td>
+								<td>Finance</td>
+								<td><button onclick="changeContent()" value="Change content"><span
+											class="ti-write"></span></button><button value="Delete"
+										onclick="deleteRow(this)"><span class="ti-trash"></span></button></td>
+							</tr>
+
+						</tbody>
+					</table>
+					<h5>Showing 1 to 4 of 12 entries</h5>
+					<div class="tab-btn">
+						<button type="Previous">Previous</button>
+						<button type="Present">1</button>
+						<button type="Next">Next</button>
+					</div>
+					<a href="../EvaluationsPage/index.html"><button type="Back">Back</button></a>
+				</section>
+		</div>
+		</main>
+	</div>
+	</div>
+</body>
+<script>
+	function deleteRow(r) {
+		var i = r.parentNode.parentNode.rowIndex;
+		document.getElementsByTagName('table')[0].deleteRow(i);
+	}
+	function changeContent() {
+		rn = window.prompt("Input the Row number(1,2,3,4)", "1");
+		cn = window.prompt("Input the Column number(0,1,2,3,4,5,6,7)", "0");
+		content = window.prompt("Input the Cell content");
+		var x = document.getElementsByTagName('table')[0].rows[parseInt(rn, 10)].cells;
+		x[parseInt(cn, 10)].innerHTML = content;
+	}
+</script>
+
+</html>
